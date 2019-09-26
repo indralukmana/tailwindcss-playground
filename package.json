@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:tailwind": "postcss src/style/tailwind.css -o src/index.css",
-    "watch:tailwind": "postcss src/style/tailwind.css -o src/index.css --watch",
+    "build:tailwind": "postcss src/css/source/*.css --dir src/css/build",
+    "watch:tailwind": "postcss src/css/source/*.css --dir src/css/build --watch",
     "start:react": "webpack-dev-server --config ./webpack.config.js --mode development",
     "start": "npm-run-all --parallel watch:tailwind start:react"
   },
