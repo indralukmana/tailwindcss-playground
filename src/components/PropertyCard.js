@@ -19,11 +19,13 @@ export const PropertyCard = () => {
     <div className='antialiased text-gray-900'>
       <div className='bg-gray-200 min-h-screen p-8 flex items-center justify-center'>
         <div className='bg-white rounded-lg overflow-hidden border'>
-          <img
-            className='h-32 w-full object-cover'
-            src={property.imageUrl}
-            alt={property.imageAlt}
-          />
+          <div className='relative bg-red-500 pb-2/3'>
+            <img
+              className='absolute h-full w-full object-cover'
+              src={property.imageUrl}
+              alt={property.imageAlt}
+            />
+          </div>
           <div className='p-6'>
             <div className='flex items-baseline'>
               <span className='inline-block bg-teal-200 text-teal-800 text-xs px-2 rounded-full uppercase font-semibold tracking-wide'>
