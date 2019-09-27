@@ -21,10 +21,15 @@ export const PropertyCard = () => {
         <div className='bg-white rounded-lg overflow-hidden border'>
           <img src={property.imageUrl} alt={property.imageAlt} />
           <div className='p-6'>
-            <div className='text-gray-600 text-xs uppercase font-semibold tracking-wide'>
-              {property.beds} beds &bull; {property.baths} baths
+            <div className='flex items-baseline'>
+              <span className='inline-block bg-teal-200 text-teal-800 text-xs px-2 rounded-full uppercase font-semibold tracking-wide'>
+                new
+              </span>
+              <div className='ml-2 text-gray-600 text-xs uppercase font-semibold tracking-wide'>
+                {property.beds} beds &bull; {property.baths} baths
+              </div>
             </div>
-            <h4 className='font-semibold text-lg leading-tight truncate'>
+            <h4 className='mt-1 font-semibold text-lg leading-tight truncate'>
               {property.title}
             </h4>
             <div className='mt-1'>
