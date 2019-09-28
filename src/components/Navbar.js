@@ -7,15 +7,15 @@ export const Navbar = () => {
   return (
     <div className='antialiased text-gray-900'>
       <div className='bg-gray-200 min-h-screen'>
-        <header className=' bg-gray-900'>
-          <div className='flex justify-between items-center px-4 py-3'>
+        <header className=' bg-gray-900 sm:flex sm:justify-between sm:px-4 sm:py-3'>
+          <div className='flex justify-between items-center px-4 py-3 sm:p-0'>
             <div>
               <img src={logoInverted} alt='workcation' className='h-8' />
             </div>
             <div>
               <button
                 type='button'
-                className='block text-gray-500 hover:text-white focus:text-white focus:outline-none'
+                className='block text-gray-500 hover:text-white focus:text-white focus:outline-none sm:hidden'
                 onClick={() => setIsOpen(!isOpen)}
               >
                 <svg class='h-6 w-6 fill-current' viewBox='0 0 24 24'>
@@ -36,7 +36,11 @@ export const Navbar = () => {
               </button>
             </div>
           </div>
-          <div className={`px-2 pt-2 pb-4 ${isOpen ? 'block' : 'hidden'}`}>
+          <div
+            className={`px-2 pt-2 pb-4 ${
+              isOpen ? 'block' : 'hidden'
+            } sm:block sm:flex sm:items-center sm:p-0`}
+          >
             <a
               href='#'
               className='block text-white font-semibold hover:bg-gray-800 rounded px-2 py-1 '
@@ -45,13 +49,13 @@ export const Navbar = () => {
             </a>
             <a
               href='#'
-              className='block text-white font-semibold hover:bg-gray-800 rounded px-2 py-1 mt-1'
+              className='block text-white font-semibold hover:bg-gray-800 rounded px-2 py-1 mt-1 sm:mt-0'
             >
               Trips
             </a>
             <a
               href='#'
-              className='block text-white font-semibold hover:bg-gray-800 rounded px-2 py-1 mt-1'
+              className='block text-white font-semibold hover:bg-gray-800 rounded px-2 py-1 mt-1 sm:mt-0'
             >
               Messages
             </a>
